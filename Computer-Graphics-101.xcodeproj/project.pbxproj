@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		69B47410290C68E40043E858 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 69B4740F290C68E40043E858 /* main.cpp */; };
+		69B47418290C69430043E858 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B47417290C69430043E858 /* OpenGL.framework */; };
+		69B4741A290C694E0043E858 /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B47419290C694E0043E858 /* GLUT.framework */; };
+		69B47496290C80290043E858 /* libglfw.3.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 69B47491290C7A0B0043E858 /* libglfw.3.3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,10 @@
 /* Begin PBXFileReference section */
 		69B4740C290C68E40043E858 /* Computer-Graphics-101 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Computer-Graphics-101"; sourceTree = BUILT_PRODUCTS_DIR; };
 		69B4740F290C68E40043E858 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		69B47417290C69430043E858 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		69B47419290C694E0043E858 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		69B47491290C7A0B0043E858 /* libglfw.3.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libglfw.3.3.dylib; path = ../../../../usr/local/Cellar/glfw/3.3.8/lib/libglfw.3.3.dylib; sourceTree = "<group>"; };
+		69B47494290C80050043E858 /* include */ = {isa = PBXFileReference; lastKnownFileType = folder; name = include; path = ../../../../usr/local/Cellar/glfw/3.3.8/include; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +39,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69B47496290C80290043E858 /* libglfw.3.3.dylib in Frameworks */,
+				69B4741A290C694E0043E858 /* GLUT.framework in Frameworks */,
+				69B47418290C69430043E858 /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +53,7 @@
 			children = (
 				69B4740E290C68E40043E858 /* Computer-Graphics-101 */,
 				69B4740D290C68E40043E858 /* Products */,
+				69B47416290C69430043E858 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,6 +71,17 @@
 				69B4740F290C68E40043E858 /* main.cpp */,
 			);
 			path = "Computer-Graphics-101";
+			sourceTree = "<group>";
+		};
+		69B47416290C69430043E858 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				69B47494290C80050043E858 /* include */,
+				69B47491290C7A0B0043E858 /* libglfw.3.3.dylib */,
+				69B47419290C694E0043E858 /* GLUT.framework */,
+				69B47417290C69430043E858 /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +260,13 @@
 		69B47414290C68E40043E858 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/glfw/3.3.8/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.8/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,7 +274,13 @@
 		69B47415290C68E40043E858 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = /usr/local/Cellar/glfw/3.3.8/include;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/Cellar/glfw/3.3.8/lib,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
